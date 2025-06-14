@@ -2,11 +2,12 @@ import { useState } from "react";
 
 const useSendMessage = () => {
     const [loading, setLoading] = useState(false);
+    const URL= process.env.url 
     const sendMessage =async ({message,receiverId}) => {
         setLoading(true);   
         try {
            
-            const res = await fetch(`${process.env.url}/api/messages/send/${receiverId}`, {
+            const res = await fetch(`${URL}/api/messages/send/${receiverId}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

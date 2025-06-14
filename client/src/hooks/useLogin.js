@@ -4,6 +4,7 @@ import { useAuthContext } from "../context/AuthContext";
 const useLogin=()=>{
     const[loading,setLoading]=useState(false);
     const {setAuthUser}=useAuthContext()
+    const URL= process.env.url 
     const login=async({username,password})=>{
         const success = handleInputError({username,password})
         if(!success){
@@ -11,7 +12,7 @@ const useLogin=()=>{
         }
         setLoading(true)
         try{
-            const res=await fetch(`${process.env.url}/api/auth/login`,{
+            const res=await fetch(`${URL}/api/auth/login`,{
                 method :"POST",
                 headers:{
                     "Content-Type":"application/json"

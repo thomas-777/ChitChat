@@ -4,10 +4,11 @@ import { useAuthContext } from "../context/AuthContext"
 const useLogout=()=>{
     const [loading,setloading]=useState(false)
     const {setAuthUser}=useAuthContext()
+    const URL= process.env.url 
     const logout =async()=>{
         setloading(true);
         try {
-            const res=await fetch( `${process.env.url}/api/auth/logout`,{
+            const res=await fetch( `${URL}/api/auth/logout`,{
                 method:"POST",
                 headers: {"Content-Type":"application/json"}
 

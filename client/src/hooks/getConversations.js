@@ -5,11 +5,12 @@ import { useEffect, useState } from "react";
  const getConversations=()=>{
     const [loading,setloading]=useState(false)
     const [conversation,setConversation]=useState([])
+    const URL= process.env.url 
     useEffect(()=>{
         const getConversations=async ()=>{
             setloading(true);
             try {
-                const response =await fetch(`${process.env.url}/api/users`,{
+                const response =await fetch(`${URL}/api/users`,{
                     credentials:'include'
                 })
                 const data=await response.json()

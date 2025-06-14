@@ -4,13 +4,14 @@ import { useAuthContext } from "../context/AuthContext"
 const useSignup = () => {
     const [loading, setloading] = useState(false)
     const {authUser, setAuthUser } = useAuthContext();
+    const URL= process.env.url 
     const signup = async ({ fullname, username, password, confirmpassword }) => {
         const success = handleInputError({ fullname, username, password, confirmpassword })
         if (!success) {
             return
         }
         try {
-            const res = await fetch(`${process.env.url}/api/auth/signup`, {
+            const res = await fetch(`${URL}/api/auth/signup`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
