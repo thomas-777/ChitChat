@@ -12,11 +12,12 @@ import {app, server } from './socket/socket.js';
 
 dotenv.config()
 const PORT=process.env.port || 5000
+const clientURL=process.env.CLIENT_URL
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 app.use(cors({
-    origin: 'http://localhost:5173', 
+    origin: `${clientURL}`, 
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
     credentials: true
   }));
