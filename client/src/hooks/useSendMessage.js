@@ -6,7 +6,7 @@ const useSendMessage = () => {
         setLoading(true);   
         try {
            
-            const res = await fetch(`http://localhost:5000/api/messages/send/${receiverId}`, {
+            const res = await fetch(`${process.env.url}/api/messages/send/${receiverId}`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

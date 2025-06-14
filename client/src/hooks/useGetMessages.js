@@ -8,7 +8,7 @@ const useGetMessages = (userid) => {
         const getMessages = async () => {
             setLoading(true);
             try {
-                const res = await fetch(`http://localhost:5000/api/messages/${userid}`, {
+                const res = await fetch(`${process.env.url}/api/messages/${userid}`, {
                     credentials: 'include'
                 });
                 const messages = await res.json();

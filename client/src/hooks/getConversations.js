@@ -9,7 +9,7 @@ import { useEffect, useState } from "react";
         const getConversations=async ()=>{
             setloading(true);
             try {
-                const response =await fetch('http://localhost:5000/api/users',{
+                const response =await fetch(`${process.env.url}/api/users`,{
                     credentials:'include'
                 })
                 const data=await response.json()
