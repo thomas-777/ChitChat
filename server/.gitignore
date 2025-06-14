@@ -1,0 +1,38 @@
+
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Dependency lock files (optional if using Yarn instead of npm)
+yarn.lock
+pnpm-lock.yaml
+
+# Build output
+dist/
+build/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Optional: coverage reports
+coverage/
+
+# Optional: local test files or debug output
+*.local
+*.test.js
+
+# For React or Vite frontend builds
+*.cache/
+*.parcel-cache/

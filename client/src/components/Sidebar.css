@@ -1,0 +1,9 @@
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logout-container {
+    margin-top: 20px; /* Adjust this value as needed */
+}
