@@ -12,6 +12,7 @@ const useLogin=()=>{
         }
         setLoading(true)
         try{
+            console.log(URL);
             const res=await fetch(`${URL}/api/auth/login`,{
                 method :"POST",
                 headers:{
