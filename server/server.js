@@ -16,6 +16,7 @@ const clientURL=process.env.CLIENT_URL
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
+console.log(`client URL is ${clientURL}`)
 app.use(cors({
     origin: `${clientURL}`, 
     methods: ['GET', 'POST', 'PUT', 'DELETE'], 
