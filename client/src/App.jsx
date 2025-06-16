@@ -9,6 +9,7 @@ import MessageContainer from './components/messages/MessageContainer'
 
 function App() {
   const {authUser}=useAuthContext();
+  console.log(import.meta.env);
   return (
     <>
         <Routes>
