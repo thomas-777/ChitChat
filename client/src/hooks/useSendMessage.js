@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const useSendMessage = () => {
     const [loading, setLoading] = useState(false);
-    const URL= process.env.url 
+    const URL= import.meta.env.VITE_SERVER_URL 
     const sendMessage =async ({message,receiverId}) => {
         setLoading(true);   
         try {

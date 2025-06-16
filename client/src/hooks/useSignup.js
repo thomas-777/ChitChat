@@ -4,7 +4,7 @@ import { useAuthContext } from "../context/AuthContext"
 const useSignup = () => {
     const [loading, setloading] = useState(false)
     const {authUser, setAuthUser } = useAuthContext();
-    const URL= process.env.url 
+    const URL= import.meta.env.VITE_SERVER_URL
     const signup = async ({ fullname, username, password, confirmpassword }) => {
         const success = handleInputError({ fullname, username, password, confirmpassword })
         if (!success) {

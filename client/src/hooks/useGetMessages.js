@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 const useGetMessages = (userid) => {
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
-    const URL= process.env.url 
+    const URL= import.meta.env.VITE_SERVER_URL 
     useEffect(() => {
         if (!userid) return;
         const getMessages = async () => {

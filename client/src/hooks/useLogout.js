@@ -4,7 +4,7 @@ import { useAuthContext } from "../context/AuthContext"
 const useLogout=()=>{
     const [loading,setloading]=useState(false)
     const {setAuthUser}=useAuthContext()
-    const URL= process.env.url 
+    const URL= import.meta.env.VITE_SERVER_URL 
     const logout =async()=>{
         setloading(true);
         try {

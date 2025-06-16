@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
  const getConversations=()=>{
     const [loading,setloading]=useState(false)
     const [conversation,setConversation]=useState([])
-    const URL= process.env.url 
+    const URL= import.meta.env.VITE_SERVER_URL
     useEffect(()=>{
         const getConversations=async ()=>{
             setloading(true);
