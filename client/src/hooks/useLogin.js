@@ -4,7 +4,7 @@ import { useAuthContext } from "../context/AuthContext";
 const useLogin=()=>{
     const[loading,setLoading]=useState(false);
     const {setAuthUser}=useAuthContext()
-    const URL= process.env.url 
+    const URL= process.env.SERVER_URL
     const login=async({username,password})=>{
         const success = handleInputError({username,password})
         if(!success){
